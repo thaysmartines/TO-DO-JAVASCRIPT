@@ -7,5 +7,7 @@
  }
 
  body {
-    background-color: url();
+    background-image: url("../img/plano_fundo.png");
+    background-position: center;
+    background-size: cover;
  }
