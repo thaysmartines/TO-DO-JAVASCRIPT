@@ -2,15 +2,23 @@
     padding: 0;
     margin: 0;
     font-family:Helvetica;
-    color: #333;
     box-sizing: border-box;
  }
 
  body {
-    background-image: url("../img/plano_fundo.png");
-    background-position: center;
-    background-size: cover;
- }
+   background-image: url("../img/plano_fundo.png");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh; /* Define a altura como 100% da altura visível da tela */
+   margin: 0; /* Remove margens */
+   padding: 0; /* Remove preenchimentos */
+   font-family: Helvetica;
+   box-sizing: border-box;
+}
+
+
+
  button {
    background-color: #FDFDFD;
    color: #102F5e;
@@ -25,8 +33,7 @@
 
 }
 button:hover {
-   background-color: #102F5e;
-   color: white;
+  
  
 }
 
@@ -37,11 +44,33 @@ button i {
    pointer-events: none;
  
 }
-input,
+input {
+   padding: 0.25rem 0.5rem;
+   margin-right: 0.3rem;
+   background: none;
+   border: none;
+   outline: none;
+   max-width: 190px;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 9999px;
+   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
 select {
    padding: 0.25rem 0.5rem;
- 
+   margin-right: 0.3rem;
+   background: none;
+   border: none;
+   outline: none;
+   max-width: 190px;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 9999px;
+   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+   color: #CCC;
+   
 }
+
 .hide {
  display: none;
  
@@ -49,12 +78,23 @@ select {
 
 /* TO-DO HEADER */
 .todo-container {
-   max-width: 450px;
+   /* max-width: 450px;
    margin: 3rem auto ;
    background-color: #FDFDFD;
    padding: 1.5rem;
-   border-radius: 15px;
-}
+   border-radius: 15px; */
+
+   max-width: 450px;
+   margin: 3rem auto ;
+   border-radius: 30px;
+   max-height: 600px;
+   padding: 1.5rem;
+   background: #212121;
+   box-shadow: 15px 15px 30px rgb(25, 25, 25),
+               -15px -15px 30px rgb(60, 60, 60);
+  }
+   
+
 .todo-container header {
    text-align: center;
    padding: 0.1rem 1rem;
@@ -70,16 +110,31 @@ select {
 #edit-form p{
    margin-bottom: 0.5rem;
    font-weight: bold;
+   color: white;
 }
 .form-control {
    display: flex;
 }
 .form-control input{
    margin-right: 0.3rem;
+   background: none;
+   border: none;
+   outline: none;
+   max-width: 190px;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 9999px;
+   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+   color: #fff;
 
 }
 #cancel-edit-btn{
    margin-top: 1rem;
+   
+
+}
+h1,h2,h3,h4{
+   color: white;
    
 
 }
@@ -106,6 +161,7 @@ select {
 #search input{
    width: 100%;
    margin-right: 0.3rem;
+   
 }
 #filter{
    width: 35%;
@@ -129,9 +185,8 @@ select {
    font-size: 0.9rem;
 
 }
-.todo button{
-   margin-left: 0.4rem;
-}
+
+
 .done{
    background-color: #395169;
 }
